@@ -1,0 +1,48 @@
+name: Build and Deploy to HostGator via SFTP
+
+on:
+  push:
+    branches:
+      - main   
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'   # ajuste se necessário
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build (Vite)
+        run: yarn build
+
+      - name: Remove old files on remote (optional)
+        uses: appleboy/ssh-action@v0.1.8
+        if: always()
+        with:
+          host: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USERNAME }}
+          key: ${{ secrets.SFTP_PRIVATE_KEY }}           
+          password: ${{ secrets.SFTP_PASSWORD }}         
+          port: ${{ secrets.SFTP_PORT }}
+          script: |
+            # Ajuste o caminho se quiser remover só dentro da pasta
+            rm -rf /home1/desori42/public_html/*
+
+      - name: Upload dist via SFTP (SCP)
+        uses: appleboy/scp-action@v0.1.5
+        with:
+          host: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USERNAME }}
+          port: ${{ secrets.SFTP_PORT }}
+          password: ${{ secrets.SFTP_PASSWORD }}       
+          source: "dist/*"
+          target: ${{ secrets.REMOTE_DIR }}
