@@ -1,0 +1,77 @@
+.navbar {
+  width: 100vw;
+  background-color: #fef5f1;
+  border-bottom: 1px solid #e8e8e8;
+  font-family: 'Clash Display', sans-serif;
+  font-weight: 400;
+  font-size: 16.67px; 
+  line-height: 90%;
+  letter-spacing: 0;
+}
+
+.navbar-container {
+  max-width: 1280px;
+  height: 82px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  position: relative;
+}
+
+.navbar-logo {
+  position: absolute;
+  left: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: #4c4c4c;
+}
+
+.navbar-cart {
+  position: absolute;
+  right: 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border-radius: 999px;
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  font-weight: 500;
+  color: #222;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.navbar-cart:hover {
+  background-color: #f1f1f1;
+  border-color: #ccc;
+}
