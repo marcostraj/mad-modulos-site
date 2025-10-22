@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
         <header className="navbar">
             <div className="navbar-container">
                 <div className="navbar-logo">
-                    <img src="/src/assets/mad-logo.svg" alt="logotipo" />
+                    <img src="mad-logo.svg" alt="logotipo" />
                 </div>
 
                 <ul className="navbar-links">

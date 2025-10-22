@@ -35,10 +35,10 @@ const WhySection: React.FC = () => {
             </h2>
             {/* Left: Gallery Grid */}
             <div className="gallery">
-            <img className="item item-1" src="/src/assets/closet1.png" alt="Closet design 1" />
-            <img className="item item-2" src="/src/assets/closet2.png" alt="Closet design 2" />
-            <img className="item item-3" src="/src/assets/closet3.png" alt="Closet design 3" />
-            <img className="item item-4" src="/src/assets/closet4.png" alt="Closet design 4" />
+            <img className="item item-1" src="closet1.png" alt="Closet design 1" />
+            <img className="item item-2" src="closet2.png" alt="Closet design 2" />
+            <img className="item item-3" src="closet3.png" alt="Closet design 3" />
+            <img className="item item-4" src="closet4.png" alt="Closet design 4" />
             </div>
         </div>
 
