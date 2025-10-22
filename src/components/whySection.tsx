@@ -11,17 +11,17 @@ const features: Feature[] = [
   {
     title: "MÓVEIS MODULARES 100% MDF",
     text: "Você não apenas compra peças, mas investe em um projeto que se encaixa perfeitamente na sua rotina e no seu espaço.",
-    icon: "/src/assets/icon1.png",
+    icon: "icon1.png",
   },
   {
     title: "PERSONALIZAÇÃO TOTAL",
     text: "Combine diferentes módulos com maleiros, gavetas, cabideiros e sapateiras para criar um closet que atenda a todas as suas necessidades.",
-    icon: "/src/assets/icon2.png",
+    icon: "icon2.png",
   },
   {
     title: "QUALIDADE E DURABILIDADE",
     text: "Usamos materiais 100% MDF de alta qualidade. Todas as peças são feitas com cortes precisos e acabamento impecável, garantindo beleza e resistência.",
-    icon: "/src/assets/icon3.png",
+    icon: "icon3.png",
   },
 ];
 
@@ -30,15 +30,13 @@ const WhySection: React.FC = () => {
     <section className="section-mad-modulos">
       <div className="mad-modulos-content">
         <div className="mad-title-container">
-            <h2>
-                Por que a <span>Mad Módulos?</span>
-            </h2>
+            <div className="mad-title-text">
+              <h1 className="subtitle">Por que a</h1>
+              <h1 className="title">Mad Módulos?</h1>
+            </div>
             {/* Left: Gallery Grid */}
             <div className="gallery">
-            <img className="item item-1" src="closet1.png" alt="Closet design 1" />
-            <img className="item item-2" src="closet2.png" alt="Closet design 2" />
-            <img className="item item-3" src="closet3.png" alt="Closet design 3" />
-            <img className="item item-4" src="closet4.png" alt="Closet design 4" />
+              <img src="grid.png" alt="Closet design 4" />
             </div>
         </div>
 
@@ -71,7 +69,7 @@ const WhySection: React.FC = () => {
               rel="noopener noreferrer"
               aria-label="Faça um orçamento pelo WhatsApp"
             >
-              <img src="/icons/whatsapp.svg" alt="WhatsApp" />
+              <img src="whats-icon.png" alt="WhatsApp" />
               Faça um orçamento
             </a>
           </div>

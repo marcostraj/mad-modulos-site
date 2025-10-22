@@ -1,15 +1,17 @@
+@import url("https://api.fontshare.com/v2/css?f[]=clash-display@400,600&display=swap");
+
 .section-mad-modulos {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 4rem 6rem;
+  padding: 6rem 7rem;
   background-color: #fef5f1;
-  font-family: "Poppins", sans-serif;
+  font-family: "Clash Display", sans-serif;
 }
 
 .mad-modulos-content {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: space-between;
   width: 100%;
   max-width: 1200px;
@@ -23,34 +25,12 @@
 
 /* LADO ESQUERDO - GALERIA DE IMAGENS */
 .gallery {
-  display: grid;
-  grid-template-areas:
-    "a b"
-    "c b"
-    "c d";
-  grid-template-columns: 240px 220px;
-  grid-template-rows: 160px 130px 120px;
-  gap: 10px;
   background-color: #fef6f3;
-  padding: 12px;
-  border-radius: 20px;
   width: fit-content;
+  max-width: max-content;
+  max-height: max-content;
   margin: 0 auto;
 }
-
-.item {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 14px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  display: block;
-}
-
-.item-1 { grid-area: a; }
-.item-2 { grid-area: b; }
-.item-3 { grid-area: c; }
-.item-4 { grid-area: d; }
 
 /* LADO DIREITO - TEXTO E CARDS */
 .mad-modulos-text {
@@ -61,7 +41,7 @@
 }
 
 .mad-modulos-text h2 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Clash Display", sans-serif;
   font-size: 2.5rem;
   color: #4a3b35;
   line-height: 1.2;
@@ -76,46 +56,49 @@
 .mad-modulos-features {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 12px;
 }
 
 .feature-card {
   background: rgba(226, 234, 255, 0.6);
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 2px solid #D4DBF7
 }
 
 .feature-card-content {
   display: flex;
   gap: 12px;
-  align-items: flex-start;
+  align-items: center;
+
 }
 
 .feature-icon {
-  width: 40px;
-  height: 40px;
+  width: 55px;
+  height: 55px;
   flex-shrink: 0;
 }
 
 .feature-text {
+  display: flex;
+  flex-direction: column;
   flex: 1;
+  gap: 8px;
 }
 
 .feature-card h3 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-  color: #262626;
+  font-family: "Clash Display", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #17181C;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
 }
 
 .feature-card p {
-  font-size: 0.95rem;
-  color: #4a4a4a;
-  line-height: 1.5;
+  font-size: 18px;
+  color: #8C8A97;
+  line-height: 120%;
   margin: 0;
   font-weight: 400;
 }
@@ -126,18 +109,17 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: linear-gradient(90deg, #379c23, #1a7409);
-  color: white;
+  background: #077D26;
+  color: #EEF1FC;
   padding: 0.9rem 1.6rem;
-  border-radius: 50px;
+  border-radius: 16px;
   text-decoration: none;
   font-weight: 500;
-  width: fit-content;
-  box-shadow: 0 6px 18px rgba(55, 156, 35, 0.25);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-top: 1rem;
-  font-family: "Poppins", sans-serif;
-  font-size: 0.95rem;
+  font-family: "Clash Display", sans-serif;
+  font-size: 16px;
+  line-height: 100%;
   border: none;
   cursor: pointer;
 }
@@ -145,12 +127,36 @@
 .whatsapp-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(55, 156, 35, 0.35);
+  color: #EEF1FC;
 }
 
 .whatsapp-btn img {
   width: 20px;
   height: 20px;
 }
+
+.subtitle {
+    font-size: 64px;
+    font-family: "Clash Display", sans-serif;
+    font-weight: 500;
+    color: #5D5151;
+    margin: 0;
+  }
+
+.title {
+    font-size: 64px;
+    font-family: "Clash Display", sans-serif;
+    font-weight: 700;
+    color: #5D5151;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .mad-title-text{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
 
 /* RESPONSIVIDADE */
 @media (max-width: 968px) {

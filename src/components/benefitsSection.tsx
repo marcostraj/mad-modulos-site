@@ -21,12 +21,12 @@ const benefits: Benefit[] = [
   {
     title: "PROJETO 3D GRATUITO",
     text: "Visualize seu closet em 3D. Nossa consultoria especializada garante que o projeto seja perfeito para você, e o melhor é totalmente gratuito.",
-    icon: "icon3.png",
+    icon: "icon4.png",
   },
   {
     title: "PAGAMENTO SEM COMPLICAÇÕES",
     text: "Entendemos que a organização do seu lar é uma prioridade, por isso, oferecemos a opção de parcelar em até 10x sem juros, tornando seu projeto mais acessível.",
-    icon: "icon1.png",
+    icon: "icon5.png",
   },
 ];
 
@@ -64,8 +64,8 @@ const BenefitsSection: React.FC = () => {
             rel="noopener noreferrer"
             aria-label="Faça um orçamento pelo WhatsApp"
           >
-            <img src="/icons/whatsapp.svg" alt="WhatsApp" />
-            Faça um orçamento 😊
+            <img src="whats-icon.png" alt="WhatsApp" />
+            Faça um orçamento
           </a>
         </div>
       </div>
