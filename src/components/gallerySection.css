@@ -1,0 +1,54 @@
+@import url("https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600&display=swap");
+
+.galeria {
+  background-color: #FFF5EE; /* fundo chapado */
+  padding: 40px 60px;
+  text-align: center;
+  font-family: "Clash Display", sans-serif;
+}
+
+.galeria__titulo {
+  font-weight: 600;
+  color: #5D5151;
+  font-size: 58px;
+  margin-bottom: 24px;
+}
+
+.galeria__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  background-color: #DBD0CA;
+  border: 0.5px solid #ACA0A0;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.galeria__grid img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #12121238;
+  object-fit: cover;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.galeria__grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+/* responsivo */
+@media (max-width: 980px) {
+  .galeria__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .galeria__grid {
+    grid-template-columns: 1fr;
+  }
+}

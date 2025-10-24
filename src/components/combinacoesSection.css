@@ -1,0 +1,107 @@
+@import url("https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600&display=swap");
+
+.card{
+    background-color: #FEFFFE;
+    border: 0.66px solid #1E1E1E;
+    border-radius: 7.5px;
+    font-family: "Clash Display", sans-serif;
+    margin: 0;
+}
+
+.card__title{
+    color: #0B0D0B;
+    size: 18px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.card__subtitle{
+   color: #0B0D0B;
+    size: 18px;
+    font-weight: 500; 
+    margin: 0;
+}
+
+.card__text{
+    color: #1E1E1E;
+    size: 15px;
+    font-weight: 400; 
+    margin-top: 20px;
+}
+
+.minha-secao-pai .combinacoes,
+.combinacoes {
+  --comb-bg: #f8efe9;
+  --card-bg: #fff;
+  --muted: #6b6161;
+  --accent: #e7e0dd;
+  --radius: 10px;
+  padding: 32px 20px;
+  background: var(--comb-bg);
+  box-sizing: border-box;
+}
+
+.combinacoes__grid{
+    width: 100%;
+    display: grid;
+    justify-items: stretch;
+}
+
+.minha-secao-pai .combinacoes .combinacoes__grid,
+.combinacoes .combinacoes__grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(450px, max-content));
+  justify-content: center;
+  gap: 20px !important;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+}
+
+.minha-secao-pai .combinacoes .card,
+.combinacoes .card {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.minha-secao-pai .combinacoes .card__visual,
+.combinacoes .card__visual {
+  margin: 18px;
+  height: 278px;
+  border-radius: 8px;
+  background-color: var(--accent);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 0 rgba(0,0,0,0.02);
+}
+
+.minha-secao-pai .combinacoes .card__body,
+.combinacoes .card__body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (max-width: 980px) {
+  .minha-secao-pai .combinacoes .combinacoes__grid,
+  .combinacoes .combinacoes__grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 620px) {
+  .minha-secao-pai .combinacoes .combinacoes__grid,
+  .combinacoes .combinacoes__grid {
+    grid-template-columns: 1fr !important;
+  }
+  .minha-secao-pai .combinacoes .card__visual,
+  .combinacoes .card__visual {
+    height: 260px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
