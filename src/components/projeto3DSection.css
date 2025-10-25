@@ -68,7 +68,6 @@
   height: 20px;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .projeto3d-content {
     flex-direction: column;
