@@ -121,3 +121,9 @@
     text-align: center;
   }
 }
+
+@media (max-width: 402px) {
+  .footer-container{
+    align-items: flex-start;
+  }
+}

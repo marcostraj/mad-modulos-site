@@ -1,13 +1,15 @@
 .carrossel-titulo-container {
     background-color: #F8E5D8;
-    width: 100vw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 0;
 }
 
 .carrossel-titulo-content {
     max-width: 1200px;
+    padding: 20px;
 }
 
 .carrossel-titulo {
@@ -24,6 +26,7 @@
     color: #0B0D0B;
     margin-bottom: 30px;
 }
+
 .carrossel {
   background-color: #FFF5EE;
   padding: 40px 0;
@@ -63,6 +66,7 @@
   display: flex;
   flex-direction: column;
   transition: transform 0.25s ease;
+  position: relative;
 }
 
 .card:hover {
@@ -131,6 +135,8 @@
   cursor: pointer;
   transition: background 0.2s;
   color: #393939;
+  border: none;
+  border-radius: 4px;
 }
 
 .preco-btn:hover {
@@ -153,6 +159,114 @@
 }
 
 .btn-carrinho:hover {
+  background: #a89e9d;
+}
+
+/* Hover Popup */
+.card__hover-popup {
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  background: #FFF5EE;
+  border: 1px solid #0B0D0B;
+  border-radius: 8px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.card:hover .card__hover-popup {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-110%);
+  pointer-events: auto;
+}
+
+.card__hover-popup::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background: #FFF5EE;
+  border-right: 1px solid #0B0D0B;
+  border-bottom: 1px solid #0B0D0B;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.hover-popup__dimensoes {
+  margin-bottom: 16px;
+}
+
+.hover-popup__dimensao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 14px;
+  color: #0B0D0B;
+}
+
+.hover-popup__dimensao:last-child {
+  border-bottom: none;
+}
+
+.hover-popup__dimensao span:first-child {
+  font-weight: 500;
+}
+
+.hover-popup__dimensao span:last-child {
+  font-weight: 400;
+}
+
+.hover-popup__preco {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e8e8e8;
+}
+
+.hover-popup__preco span:first-child {
+  font-size: 14px;
+  color: #0B0D0B;
+}
+
+.hover-popup__preco-valor {
+  background: #DBD0CA;
+  padding: 4px 10px;
+  font-size: 18px;
+  border-radius: 4px;
+  color: #393939;
+}
+
+.hover-popup__btn-carrinho {
+  background: #ACA0A0;
+  border: none;
+  color: #393939;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  width: 100%;
+}
+
+.hover-popup__btn-carrinho:hover {
   background: #a89e9d;
 }
 
@@ -210,20 +324,104 @@
   background-color: #372121;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .carrossel__pagina {
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: nowrap;
   }
 
   .card {
-    width: 45%;
+    flex: 0 0 calc(33.333% - 32px);
+  }
+}
+
+@media (max-width: 900px) {
+  .carrossel__pagina {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex: 0 0 calc(50% - 32px);
     margin-bottom: 20px;
+  }
+  
+  /* Esconder hover popup no mobile */
+  .card__hover-popup {
+    display: none;
   }
 }
 
 @media (max-width: 500px) {
+  .carrossel-titulo {
+    font-size: 32px;
+  }
+
+  .carrossel-desc {
+    font-size: 16px;
+  }
+
+  .carrossel__viewport {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #b3a9a3 #FFF5EE;
+    padding: 0 16px;
+    margin: 0 -16px;
+  }
+
+  .carrossel__viewport::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .carrossel__viewport::-webkit-scrollbar-thumb {
+    background-color: #b3a9a3;
+    border-radius: 10px;
+  }
+
+  .carrossel__lista {
+    display: flex !important;
+    flex-direction: row !important;
+    width: max-content !important;
+    gap: 16px !important;
+    overflow: visible !important;
+    padding: 0 4px 8px 4px !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .carrossel__pagina {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex: 0 0 auto;
+    gap: 12px;
+    scroll-snap-align: start;
+    padding-top: 35px;
+    padding-left: 45px;
+  }
+
   .card {
-    width: 90%;
+    flex: 0 0 auto;
+    width: 280px;
+    min-height: 320px;
+    box-sizing: border-box;
+  }
+
+  .card h3, .card p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .carrossel__controles {
+    display: none !important;
+  }
+  
+  /* Garantir que hover popup não aparece no mobile */
+  .card__hover-popup {
+    display: none !important;
   }
 }

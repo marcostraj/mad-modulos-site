@@ -3,10 +3,15 @@
 .section-mad-modulos {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding: 6rem 7rem;
   background-color: #fef5f1;
   font-family: "Clash Display", sans-serif;
+  max-width: 100%;
+  overflow: hidden;
+  background-image: url('/src/assets/background-1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .mad-modulos-content {
@@ -15,7 +20,7 @@
   justify-content: space-between;
   width: 100%;
   max-width: 1200px;
-  gap: 4rem;
+  gap: 2rem;
 }
 
 .mad-title-container{
@@ -25,11 +30,7 @@
 
 /* LADO ESQUERDO - GALERIA DE IMAGENS */
 .gallery {
-  background-color: #fef6f3;
-  width: fit-content;
-  max-width: max-content;
-  max-height: max-content;
-  margin: 0 auto;
+  width: 100%;
 }
 
 /* LADO DIREITO - TEXTO E CARDS */
@@ -38,6 +39,7 @@
   display: flex;
   flex-direction: column;
   gap: 0;
+  width: 100%;
 }
 
 .mad-modulos-text h2 {
@@ -60,10 +62,10 @@
 }
 
 .feature-card {
-  background: rgba(226, 234, 255, 0.6);
+  background: rgb(226, 234, 255);
   border-radius: 12px;
   padding: 1.5rem;
-  border: 2px solid #D4DBF7
+  border: 2px solid #D4DBF7;
 }
 
 .feature-card-content {
@@ -122,6 +124,7 @@
   line-height: 100%;
   border: none;
   cursor: pointer;
+  max-width: 100%;
 }
 
 .whatsapp-btn:hover {
@@ -158,14 +161,37 @@
     gap: 6px;
   }
 
-/* RESPONSIVIDADE */
-@media (max-width: 968px) {
+@media(max-width: 1295px) {
+  .whatsapp-btn {
+    padding: 0.9rem 1.0rem;
+  }
+}
+
+@media (max-width: 1230px) {
   .section-mad-modulos {
-    padding: 2rem 1rem;
+    padding: 6rem 2rem;
   }
   
   .mad-modulos-content {
-    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .gallery {
+    order: 2;
+  }
+  
+  .mad-modulos-text {
+    order: 1;
+  }
+}
+
+@media (max-width: 1145px) {
+  .section-mad-modulos {
+    padding: 6rem 2rem;
+    padding-top: 0;
+  }
+  
+  .mad-modulos-content {
     gap: 2rem;
   }
   
@@ -181,16 +207,19 @@
     font-size: 2rem;
     text-align: center;
   }
+
+  .feature-card p{
+    font-size: 16px;
+  }
 }
 
-@media (max-width: 576px) {
-  .gallery {
-    grid-template-columns: 150px 140px;
-    grid-template-rows: 100px 80px 70px;
-    gap: 8px;
-    padding: 8px;
+@media (max-width: 790px) {
+
+  .mad-modulos-content {
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   .feature-card-content {
     flex-direction: column;
     gap: 8px;
@@ -199,4 +228,33 @@
   .feature-icon {
     align-self: center;
   }
+}
+
+@media (max-width: 402px) {
+  .section-mad-modulos {
+    padding: 6rem 1rem;
+  }
+
+  .subtitle {
+    font-size: 30px;
+  }
+
+.title {
+    font-size: 30px;
+  }
+
+  .section-mad-modulos{
+    padding-top: 20px;
+  }
+
+  .feature-card p{
+    font-size: 16px;
+  }
+
+  .whatsapp-btn{
+    padding: 0.9rem 0.8rem;
+    font-size: 14px;
+    margin: 0;
+  }
+  
 }

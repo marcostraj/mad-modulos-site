@@ -11,22 +11,22 @@ const benefits: Benefit[] = [
   {
     title: "PERSONALIZAÇÃO TOTAL",
     text: "Você monta o seu closet de jeito que quiser, escolhendo entre gavetas, maleiros, espécies e mais, para um projeto que realmente reflete suas necessidades.",
-    icon: "icon1.png",
+    icon: "/src/assets/icon1.png",
   },
   {
     title: "QUALIDADE QUE VOCÊ PODE CONFIAR",
     text: "Usamos 100% MDF de alta qualidade, um material que oferece resistência e durabilidade. O resultado são móveis com acabamento impecável, feitos para durar.",
-    icon: "icon2.png",
+    icon: "/src/assets/icon2.png",
   },
   {
     title: "PROJETO 3D GRATUITO",
     text: "Visualize seu closet em 3D. Nossa consultoria especializada garante que o projeto seja perfeito para você, e o melhor é totalmente gratuito.",
-    icon: "icon4.png",
+    icon: "/src/assets/icon4.png",
   },
   {
     title: "PAGAMENTO SEM COMPLICAÇÕES",
     text: "Entendemos que a organização do seu lar é uma prioridade, por isso, oferecemos a opção de parcelar em até 10x sem juros, tornando seu projeto mais acessível.",
-    icon: "icon5.png",
+    icon: "/src/assets/icon5.png",
   },
 ];
 
@@ -64,7 +64,7 @@ const BenefitsSection: React.FC = () => {
             rel="noopener noreferrer"
             aria-label="Faça um orçamento pelo WhatsApp"
           >
-            <img src="whats-icon.png" alt="WhatsApp" />
+            <img src="/src/assets/whats-icon.png" alt="WhatsApp" />
             Faça um orçamento
           </a>
         </div>

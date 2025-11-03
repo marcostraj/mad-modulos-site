@@ -11,7 +11,7 @@ const VideoSection = () => {
         {!isPlaying ? (
           <div className="video-thumbnail-wrapper">
             <img
-              src="thumb-video.png"
+              src="/src/assets/thumb-video.png"
               alt="Thumbnail do vídeo"
               className="video-thumbnail"
             />

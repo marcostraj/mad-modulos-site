@@ -11,17 +11,17 @@ const features: Feature[] = [
   {
     title: "MÓVEIS MODULARES 100% MDF",
     text: "Você não apenas compra peças, mas investe em um projeto que se encaixa perfeitamente na sua rotina e no seu espaço.",
-    icon: "icon1.png",
+    icon: "/src/assets/icon1.png",
   },
   {
     title: "PERSONALIZAÇÃO TOTAL",
     text: "Combine diferentes módulos com maleiros, gavetas, cabideiros e sapateiras para criar um closet que atenda a todas as suas necessidades.",
-    icon: "icon2.png",
+    icon: "/src/assets/icon2.png",
   },
   {
     title: "QUALIDADE E DURABILIDADE",
     text: "Usamos materiais 100% MDF de alta qualidade. Todas as peças são feitas com cortes precisos e acabamento impecável, garantindo beleza e resistência.",
-    icon: "icon3.png",
+    icon: "/src/assets/icon3.png",
   },
 ];
 
@@ -35,8 +35,8 @@ const WhySection: React.FC = () => {
               <h1 className="title">Mad Módulos?</h1>
             </div>
             {/* Left: Gallery Grid */}
-            <div className="gallery">
-              <img src="grid.png" alt="Closet design 4" />
+            <div>
+              <img className="gallery" src="/src/assets/grid.png" alt="Closet design 4" />
             </div>
         </div>
 
@@ -69,7 +69,7 @@ const WhySection: React.FC = () => {
               rel="noopener noreferrer"
               aria-label="Faça um orçamento pelo WhatsApp"
             >
-              <img src="whats-icon.png" alt="WhatsApp" />
+              <img src="/src/assets/whats-icon.png" alt="WhatsApp" />
               Faça um orçamento
             </a>
           </div>

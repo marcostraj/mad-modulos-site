@@ -19,12 +19,18 @@ function App() {
       <Hero />
       <VideoSection />
       <WhySection />
-      <CarrosselModulos />
+      <section id='carrosselId'>
+        <CarrosselModulos />
+      </section>
       <BenefitsSection />
-      <CombinationsSection />
+      <section id='combinationsId'>
+        <CombinationsSection />
+      </section>
       <CombinacoesSection />
       <GallerySection />
-      <Projeto3DSection />
+      <section id='projeto3dId'>
+        <Projeto3DSection />
+      </section>
       <Footer />
     </>
   )

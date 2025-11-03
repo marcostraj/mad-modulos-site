@@ -2,14 +2,18 @@
 
 .benefits-section {
   background-color: #372F2F;
-  padding: 4rem 2rem;
   font-family: "Clash Display", sans-serif;
+  background-image: url("/src/assets/background-2.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .benefits-container {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
+  z-index: 1;
+  padding: 4rem 2rem;
 }
 
 .benefits-title {
@@ -32,6 +36,7 @@
   border-radius: 12px;
   padding: 1.5rem;
   border: 2px solid #D4DBF7;
+  transform: 0.25s ease;
 }
 
 .benefit-card:hover {
@@ -113,6 +118,13 @@
 .whatsapp-btn-benefits img {
   width: 20px;
   height: 20px;
+}
+
+@media(max-width: 1070px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
 }
 
 /* Responsividade */

@@ -1,18 +1,71 @@
-import React from "react";
+import React, { useState } from "react";
 import "./gallerySection.css";
 
 const GallerySection: React.FC = () => {
+  const [imagemAtual, setImagemAtual] = useState(0);
+  const imagens = [
+    "/src/assets/frame-1.png",
+    "/src/assets/frame-2.png", 
+    "/src/assets/frame-3.png",
+    "/src/assets/frame-4.png",
+    "/src/assets/frame-5.png",
+    "/src/assets/frame-6.png"
+  ];
+
+  const proximaImagem = () => {
+    setImagemAtual((prev) => (prev + 1) % imagens.length);
+  };
+
+  const imagemAnterior = () => {
+    setImagemAtual((prev) => (prev - 1 + imagens.length) % imagens.length);
+  };
+
+  const irParaImagem = (index: number) => {
+    setImagemAtual(index);
+  };
+
   return (
     <section className="galeria">
       <h2 className="galeria__titulo">Galeria</h2>
 
       <div className="galeria__grid">
-        <img src="frame-1.png" alt="Guarda-roupa planejado 1" />
-        <img src="frame-2.png" alt="Guarda-roupa planejado 2" />
-        <img src="frame-3.png" alt="Guarda-roupa planejado 3" />
-        <img src="frame-4.png" alt="Guarda-roupa planejado 4" />
-        <img src="frame-5.png" alt="Guarda-roupa planejado 5" />
-        <img src="frame-6.png" alt="Guarda-roupa planejado 6" />
+        {imagens.map((src, index) => (
+          <img 
+            key={index}
+            src={src} 
+            alt={`Guarda-roupa planejado ${index + 1}`}
+            className={index === imagemAtual ? "ativa" : ""}
+          />
+        ))}
+      </div>
+
+      {/* 🔹 CONTROLES - VISÍVEIS APENAS NO MOBILE */}
+      <div className="galeria__controles">
+        <button 
+          className="galeria__btn"
+          onClick={imagemAnterior}
+          disabled={imagemAtual === 0}
+        >
+          ‹
+        </button>
+        
+        <div className="galeria__indicadores">
+          {imagens.map((_, index) => (
+            <button
+              key={index}
+              className={`galeria__indicador ${index === imagemAtual ? "ativo" : ""}`}
+              onClick={() => irParaImagem(index)}
+            />
+          ))}
+        </div>
+
+        <button 
+          className="galeria__btn"
+          onClick={proximaImagem}
+          disabled={imagemAtual === imagens.length - 1}
+        >
+          ›
+        </button>
       </div>
     </section>
   );
