@@ -21,7 +21,7 @@ const modulos: Modulo[] = [
     nome: "MÓDULO 1", 
     descricao: "Com maleiro, prateleira e 4 sapateiras", 
     preco: 710, 
-    imagem: "/src/assets/mod-1.png",
+    imagem: "mod-1.png",
     dimensoes: { altura: "2.20m", profundidade: "45.0cm", largura: "60.0cm" }
   },
   { 
@@ -29,7 +29,7 @@ const modulos: Modulo[] = [
     nome: "MÓDULO 2", 
     descricao: "Com maleiro, cabideiro e 4 gavetas", 
     preco: 780, 
-    imagem: "/src/assets/mod-2.png",
+    imagem: "mod-2.png",
     dimensoes: { altura: "2.20m", profundidade: "45.0cm", largura: "80.0cm" }
   },
   { 
@@ -37,7 +37,7 @@ const modulos: Modulo[] = [
     nome: "MÓDULO 3", 
     descricao: "Com 3 prateleiras espaçosas", 
     preco: 470, 
-    imagem: "/src/assets/mod-3.png",
+    imagem: "mod-3.png",
     dimensoes: { altura: "2.20m", profundidade: "45.0cm", largura: "40.0cm" }
   },
   { 
@@ -45,7 +45,7 @@ const modulos: Modulo[] = [
     nome: "MÓDULO 4", 
     descricao: "Com 3 prateleiras e 2 gavetas", 
     preco: 880, 
-    imagem: "/src/assets/mod-4.png",
+    imagem: "mod-4.png",
     dimensoes: { altura: "2.20m", profundidade: "45.0cm", largura: "1.16m" }
   },
   { 
@@ -53,7 +53,7 @@ const modulos: Modulo[] = [
     nome: "MÓDULO 5", 
     descricao: "Com maleiro e 2 cabideiros", 
     preco: 920, 
-    imagem: "/src/assets/mod-1.png",
+    imagem: "mod-1.png",
     dimensoes: { altura: "2.20m", profundidade: "45.0cm", largura: "1.00m" }
   },
   { 
@@ -61,7 +61,7 @@ const modulos: Modulo[] = [
     nome: "MÓDULO 6", 
     descricao: "Com 2 prateleiras e 1 cabideiro", 
     preco: 640, 
-    imagem: "/src/assets/mod-2.png",
+    imagem: "mod-2.png",
     dimensoes: { altura: "2.20m", profundidade: "45.0cm", largura: "70.0cm" }
   },
 ];

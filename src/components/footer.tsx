@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
       <div className="footer-container">
         {/* Logo principal */}
         <div className="footer-logo">
-          <img src="/src/assets/mad-logo.svg" alt="Logo Módulos" />
+          <img src="mad-logo.svg" alt="Logo Módulos" />
         </div>
 
         {/* Colunas de conteúdo */}
@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
         <p>
           Desenvolvido por{" "}
           <a href="https://vallen.com.br" target="_blank" rel="noopener noreferrer" className="vallen-link">
-            <img src="/src/assets/vallen-logo.png" alt="" />
+            <img src="vallen-logo.png" alt="" />
           </a>
         </p>
       </div>

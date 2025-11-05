@@ -9,7 +9,7 @@
   font-family: "Clash Display", sans-serif;
   max-width: 100%;
   overflow: hidden;
-  background-image: url('/src/assets/background-1.png');
+  background-image: url('background-1.png');
   background-repeat: no-repeat;
   background-size: cover;
 }

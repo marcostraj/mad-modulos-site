@@ -6,7 +6,7 @@ const Projeto3DSection: React.FC = () => {
     <section className="projeto3d-section">
       <div className="projeto3d-content">
         <img
-          src="/src/assets/iconCloset.png"
+          src="iconCloset.png"
           alt="Armário"
           className="projeto3d-image"
         />
@@ -24,7 +24,7 @@ const Projeto3DSection: React.FC = () => {
               rel="noopener noreferrer"
               aria-label="Faça um orçamento pelo WhatsApp"
             >
-              <img src="/src/assets/whats-icon.png" alt="WhatsApp" />
+              <img src="whats-icon.png" alt="WhatsApp" />
               Quero meu projeto 3D gratuito agora!
             </a>
         </div>
