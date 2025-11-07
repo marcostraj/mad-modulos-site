@@ -39,7 +39,7 @@
 
 .carrossel__viewport {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1230px;
   overflow: hidden;
   position: relative;
 }
@@ -54,8 +54,8 @@
   display: flex;
   justify-content: center;
   gap: 32px;
-  height: 100vh;
   align-items: center;
+  padding-top: 30px;
 }
 
 .card {
@@ -162,7 +162,6 @@
   background: #a89e9d;
 }
 
-/* Hover Popup */
 .card__hover-popup {
   position: absolute;
   top: 250px;
@@ -172,7 +171,7 @@
   border: 1px solid #0B0D0B;
   border-radius: 8px;
   padding: 20px;
-  width: 280px;
+  width: 220px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   z-index: 1;
   opacity: 0;
@@ -378,17 +377,6 @@
   .carrossel__viewport::-webkit-scrollbar-thumb {
     background-color: #b3a9a3;
     border-radius: 10px;
-  }
-
-  .carrossel__lista {
-    display: flex !important;
-    flex-direction: row !important;
-    width: max-content !important;
-    gap: 16px !important;
-    overflow: visible !important;
-    padding: 0 4px 8px 4px !important;
-    transform: none !important;
-    transition: none !important;
   }
 
   .carrossel__pagina {

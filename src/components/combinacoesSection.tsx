@@ -17,7 +17,7 @@ const data: CardData[] = [
         subtitle: "Otimização inteligente (Módulos 1 + 2 + 5)",
         description:
         "Quem precisa de um mix de organização para sapatos, roupas de cabide e gavetas para itens menores. Ideal para um casal ou para quem divide o espaço.",
-        image: "comb-closet-1.png",
+        image: "/src/assets/comb-closet-1.png",
     },
     {
         id: 2,
@@ -25,7 +25,7 @@ const data: CardData[] = [
         subtitle: "Praticidade e organização (Módulos 3 + 4 + 6)",
         description:
         "Quem tem muitas roupas dobráveis e precisa de um espaço para sapatos, além de nichos e cabideiros para organizar casacos e acessórios.",
-        image: "comb-closet-2.png",
+        image: "/src/assets/comb-closet-2.png",
     },
     {
         id: 3,
@@ -33,7 +33,7 @@ const data: CardData[] = [
         subtitle: "O essencial (Módulos 1+2+10)",
         description:
         "Quem precisa de soluções rápidas e eficientes para organizar sapatos, casacos e itens que precisam ser pendurados.",
-        image: "comb-closet-3.png",
+        image: "/src/assets/comb-closet-3.png",
     },
 ];
 

@@ -123,7 +123,6 @@ section{
     justify-content: center;
   }
 
-  /* 🔹 CORREÇÃO DEFINITIVA - HORIZONTAL COM SCROLL */
   .combinacoes__grid {
     display: flex !important;
     flex-direction: row !important;
@@ -154,7 +153,6 @@ section{
     border-radius: 10px;
   }
 
-  /* 🔹 CARDS HORIZONTAIS */
   .combinacoes__grid .card {
     flex: 0 0 auto !important;
     width: 300px !important;

@@ -2,6 +2,7 @@ import { Link } from 'react-scroll';
 import { ShoppingCart, Menu, X } from "lucide-react";
 import React, { useState } from "react";
 import "./navbar.css";
+import { useCart } from "./cardContext";
 
 const Navbar: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,6 +13,8 @@ const Navbar: React.FC = () => {
         { name: "Combinações", href: "combinationsId" },
         { name: "Projeto gratuito", href: "projeto3dId" },
     ];
+
+    const { toggleCart, cart } = useCart();
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -26,7 +29,7 @@ const Navbar: React.FC = () => {
             <div className="navbar-container">
                 <div className="navbar-logo">
                     <Link to="home" smooth={true} duration={800}>
-                        <img src="mad-logo.svg" alt="logotipo" />
+                        <img src="/src/assets/mad-logo.svg" alt="logotipo" />
                     </Link>
                 </div>
 
@@ -55,13 +58,12 @@ const Navbar: React.FC = () => {
                     {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
 
-                <button className="navbar-cart">
-                    <ShoppingCart size={18} />
-                    <span>Carrinho</span>
+                <button className="navbar-cart" onClick={toggleCart}>
+                <ShoppingCart size={18} />
+                <span>Carrinho{cart.length > 0 ? ` (${cart.length})` : ""}</span>
                 </button>
             </div>
 
-            {/* Menu Mobile */}
             <div className={`mobile-menu ${isMenuOpen ? 'active' : ''}`}>
                 <ul className="mobile-menu-links">
                     {links.map((link) => (

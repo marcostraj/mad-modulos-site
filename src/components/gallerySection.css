@@ -44,14 +44,12 @@
   z-index: 2;
 }
 
-/* responsivo */
 @media (max-width: 980px) {
   .galeria__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* 🔹 MOBILE - CARROSSEL COM CONTROLES */
 @media (max-width: 620px) {
   .galeria {
     text-align: left;
@@ -63,7 +61,6 @@
     margin-bottom: 20px;
   }
 
-  /* 🔹 CONTAINER DO CARROSSEL */
   .galeria__grid {
     display: flex !important;
     flex-direction: row !important;
@@ -71,13 +68,13 @@
     position: relative;
     background-color: #DBD0CA;
     border-radius: 8px;
-    padding: 0 !important;
+    padding: 10 !important;
     margin: 0 auto;
     max-width: 100%;
     height: 300px;
+    border: 0.5px solid #ACA0A0;
   }
 
-  /* 🔹 IMAGENS DO CARROSSEL */
   .galeria__grid img {
     width: 100% !important;
     height: 100% !important;
@@ -89,12 +86,10 @@
     display: none;
   }
 
-  /* 🔹 IMAGEM ATIVA */
   .galeria__grid img.ativa {
     display: block !important;
   }
 
-  /* 🔹 CONTROLES DO CARROSSEL */
   .galeria__controles {
     display: flex !important;
     justify-content: center;
@@ -129,8 +124,8 @@
     cursor: not-allowed;
   }
 
-  /* 🔹 INDICADORES (BOLINHAS) */
   .galeria__indicadores {
+    display: none;
     display: flex;
     gap: 8px;
     justify-content: center;
@@ -138,6 +133,7 @@
   }
 
   .galeria__indicador {
+    display: none;
     width: 8px;
     height: 8px;
     border-radius: 50%;

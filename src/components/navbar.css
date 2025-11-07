@@ -1,7 +1,7 @@
 .navbar {
   width: 100vw;
   background-color: #fef5f1;
-  border-bottom: 1px solid #e8e8e8;
+  border-bottom: 1.2px solid #303030;
   font-family: 'Clash Display', sans-serif;
   font-weight: 400;
   font-size: 16.67px; 
@@ -42,6 +42,7 @@
   margin: 0;
   padding: 0;
   flex: 1;
+  cursor: pointer;
 }
 
 .navbar-links a {
@@ -53,7 +54,7 @@
 }
 
 .navbar-links a:hover {
-  color: #4c4c4c;
+  color: #797777;
 }
 
 .navbar-cart {
@@ -77,7 +78,6 @@
   border-color: #ccc;
 }
 
-/* Menu Mobile */
 .menu-toggle {
   display: none;
   background: transparent;
@@ -133,7 +133,7 @@
 }
 
 .mobile-menu-links a:hover {
-  color: #4c4c4c;
+  color: #646464;
 }
 
 .overlay {
@@ -154,7 +154,18 @@
   visibility: visible;
 }
 
-/* Media Query para Mobile */
+@media (max-width: 1130px) {
+  .navbar-cart {
+    right: 16px;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  .navbar-cart span {
+    display: none;
+  }
+}
+
 @media (max-width: 880px) {
   .navbar-container {
     padding: 0 16px;

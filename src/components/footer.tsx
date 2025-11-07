@@ -1,25 +1,38 @@
 import React from "react";
 import "./footer.css";
+import { Link } from 'react-scroll';
+
+const links: { name: string; href: string }[] = [
+        { name: "Conheça a seleção", href: "carroselId" },
+        { name: "Combinações", href: "carroselId" },
+        { name: "Galeria de imagens", href: "combinationsId" },
+    ];
 
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Logo principal */}
         <div className="footer-logo">
-          <img src="mad-logo.svg" alt="Logo Módulos" />
+          <img src="/src/assets/mad-logo.svg" alt="Logo Módulos" />
         </div>
-
-        {/* Colunas de conteúdo */}
         <div className="footer-columns">
           <div className="footer-column">
             <h3 className="footer-title">
               <span className="icon green"></span>Módulos
             </h3>
-            <ul>
-              <li><a href="#">Conheça a seleção</a></li>
-              <li><a href="#">Combinações</a></li>
-              <li><a href="#">Galeria de imagens</a></li>
+            <ul className="footer-title-ul">
+              {links.map((link) => (
+                                      <li key={link.name}>
+                                          <Link 
+                                              to={link.href}
+                                              smooth={true}
+                                              duration={800}
+                                              offset={-10}
+                                          >
+                                              {link.name}
+                                          </Link>
+                                      </li>
+                                  ))}
             </ul>
           </div>
 
@@ -27,7 +40,7 @@ const Footer: React.FC = () => {
             <h3 className="footer-title">
               <span className="icon blue"></span>Fale conosco
             </h3>
-            <ul>
+            <ul className="footer-title-ul">
               <li><a href="#">Whatsapp comercial</a></li>
               <li><a href="#">Encomendas</a></li>
               <li><a href="#">Atendimento ao cliente</a></li>
@@ -36,7 +49,7 @@ const Footer: React.FC = () => {
 
           <div className="footer-column">
             <h3 className="footer-title">Sobre nós</h3>
-            <ul>
+            <ul className="footer-title-ul">
               <li>Av. Sapopemba 6115 - São Paulo-SP</li>
               <li>(11) 98121-7300</li>
               <li><a href="#" className="terms-link">Termos & Condições</a></li>
@@ -45,12 +58,11 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      {/* Linha e créditos */}
       <div className="footer-bottom">
         <p>
           Desenvolvido por{" "}
           <a href="https://vallen.com.br" target="_blank" rel="noopener noreferrer" className="vallen-link">
-            <img src="vallen-logo.png" alt="" />
+            <img src="/src/assets/vallen-logo.png" alt="" />
           </a>
         </p>
       </div>

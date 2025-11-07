@@ -135,15 +135,14 @@
     padding: 0 20px;
   }
 
-  /* 🔹 CORREÇÃO: REMOVE OS POSITION QUE ESTAVAM EMPURRANDO A IMAGEM */
   .combination-imagem-container {
-    width: 100% !important; /* 🔹 Volta para 100% normal */
+    width: 100% !important;
     overflow-x: auto !important;
     overflow-y: hidden !important;
     -webkit-overflow-scrolling: touch !important;
     padding: 10px 0 !important;
     margin: 0 !important;
-    position: static !important; /* 🔹 Remove positioning */
+    position: static !important;
     left: auto !important;
     right: auto !important;
     margin-left: 0 !important;
@@ -156,7 +155,7 @@
     min-width: 100px;
     object-fit: contain;
     display: block;
-    margin: 0 auto !important; /* 🔹 Centraliza */
+    margin: 0 auto !important; 
   }
 
   .combination-content-container {

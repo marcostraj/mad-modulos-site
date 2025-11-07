@@ -16,17 +16,15 @@ const VideoSection = () => {
     const videoElement = videoRef.current;
     if (!videoElement) return;
 
-    // Observer: detecta quando o vídeo deixa de estar visível
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
 
         if (!entry.isIntersecting) {
-          // Saiu da tela → muta e pausa som
           videoElement.muted = true;
         }
       },
-      { threshold: 0.3 } // 30% visível = ainda conta como "visível"
+      { threshold: 0.3 } 
     );
 
     observer.observe(videoElement);
@@ -46,7 +44,7 @@ const VideoSection = () => {
           muted
           playsInline
         >
-          <source src="video-thumb.mp4" type="video/mp4" />
+          <source src="/src/assets/video-thumb.mp4" type="video/mp4" />
         </video>
 
         <button className="sound-button" onClick={enableSound}>

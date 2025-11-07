@@ -9,13 +9,15 @@ import CombinacoesSection from './components/combinacoesSection'
 import GallerySection from './components/gallerySection'
 import Projeto3DSection from './components/projeto3DSection'
 import Footer from './components/footer'
-import CarrosselModulos from './components/carrosselModulosSection' 
+import CarrosselModulos from './components/carrosselModulosSection'
+import CarrinhoLateral from './components/carrinhoLateral'
 
 function App() {
 
   return (
     <>
       <Navbar />
+      <CarrinhoLateral />
       <Hero />
       <VideoSection />
       <WhySection />

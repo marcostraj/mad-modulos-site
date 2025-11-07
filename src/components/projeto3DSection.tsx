@@ -2,11 +2,12 @@ import React from "react";
 import "./projeto3DSection.css";
 
 const Projeto3DSection: React.FC = () => {
+
   return (
     <section className="projeto3d-section">
       <div className="projeto3d-content">
         <img
-          src="iconCloset.png"
+          src="/src/assets/iconCloset.png"
           alt="Armário"
           className="projeto3d-image"
         />
@@ -18,10 +19,10 @@ const Projeto3DSection: React.FC = () => {
           </p>
 
           <a
-              href="https://wa.me/SEUNUMERO"
+              href="https://wa.me/5511981217300"
               className="whatsapp-btn"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noreferrer"
               aria-label="Faça um orçamento pelo WhatsApp"
             >
               <img src="whats-icon.png" alt="WhatsApp" />

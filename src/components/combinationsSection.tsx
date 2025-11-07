@@ -10,7 +10,7 @@ const CombinationsSection: React.FC = () => {
       
       <div className="combination-content-container">
         <div className="combination-imagem-container">
-          <img src="comb-closet.png" alt="Closet modular combinado" />
+          <img src="/src/assets/comb-closet.png" alt="Closet modular combinado" />
         </div>
         <div className="combination-text-container">
           <p>
