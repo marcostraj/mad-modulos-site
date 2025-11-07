@@ -1,15 +1,28 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import HighlightBar from "./highlightBar";
 import "./videoSection.css";
 
 const VideoSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [isMuted, setIsMuted] = useState(true);
 
-  const enableSound = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = false;
-      videoRef.current.volume = 1;
+  const toggleSound = async () => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const newMuted = !video.muted;
+
+    video.muted = newMuted;
+    video.volume = newMuted ? 0 : 1;
+
+    if (!newMuted) {
+      try {
+        await video.play();
+      } catch (err) {
+      }
     }
+
+    setIsMuted(newMuted);
   };
 
   useEffect(() => {
@@ -22,9 +35,10 @@ const VideoSection = () => {
 
         if (!entry.isIntersecting) {
           videoElement.muted = true;
+          setIsMuted(true);
         }
       },
-      { threshold: 0.3 } 
+      { threshold: 0.3 }
     );
 
     observer.observe(videoElement);
@@ -35,20 +49,19 @@ const VideoSection = () => {
   return (
     <section className="video-section">
       <div className="video-container">
-
         <video
           ref={videoRef}
           className="video-background"
           autoPlay
           loop
-          muted
+          muted={isMuted}
           playsInline
         >
-          <source src="/src/assets/video-thumb.mp4" type="video/mp4" />
+          <source src="video-thumb.mp4" type="video/mp4" />
         </video>
 
-        <button className="sound-button" onClick={enableSound}>
-          🔊 
+        <button className="sound-button" onClick={toggleSound} aria-pressed={!isMuted}>
+          {isMuted ? <img src="sound-icon-on.svg" alt="" /> : <img src="sound-icon-off.svg" alt="" />}
         </button>
       </div>
 

@@ -1,13 +1,19 @@
 import React from "react";
 import "./projeto3DSection.css";
 
+const whatsappNumber = "5511981217300";
+
+  const message = encodeURIComponent(
+    `Olá! Gostaria de fazer um orçamento!`
+  );
+
 const Projeto3DSection: React.FC = () => {
 
   return (
     <section className="projeto3d-section">
       <div className="projeto3d-content">
         <img
-          src="/src/assets/iconCloset.png"
+          src="iconCloset.png"
           alt="Armário"
           className="projeto3d-image"
         />
@@ -19,7 +25,7 @@ const Projeto3DSection: React.FC = () => {
           </p>
 
           <a
-              href="https://wa.me/5511981217300"
+              href={`https://wa.me/${whatsappNumber}?text=${message}`}
               className="whatsapp-btn"
               target="_blank"
               rel="noreferrer"

@@ -11,19 +11,25 @@ const features: Feature[] = [
   {
     title: "MÓVEIS MODULARES 100% MDF",
     text: "Você não apenas compra peças, mas investe em um projeto que se encaixa perfeitamente na sua rotina e no seu espaço.",
-    icon: "/src/assets/icon1.png",
+    icon: "icon1.png",
   },
   {
     title: "PERSONALIZAÇÃO TOTAL",
     text: "Combine diferentes módulos com maleiros, gavetas, cabideiros e sapateiras para criar um closet que atenda a todas as suas necessidades.",
-    icon: "/src/assets/icon2.png",
+    icon: "icon2.png",
   },
   {
     title: "QUALIDADE E DURABILIDADE",
     text: "Usamos materiais 100% MDF de alta qualidade. Todas as peças são feitas com cortes precisos e acabamento impecável, garantindo beleza e resistência.",
-    icon: "/src/assets/icon3.png",
+    icon: "icon3.png",
   },
 ];
+
+const whatsappNumber = "5511981217300";
+
+  const message = encodeURIComponent(
+    `Olá! Gostaria de fazer um orçamento!`
+  );
 
 const WhySection: React.FC = () => {
   return (
@@ -34,13 +40,11 @@ const WhySection: React.FC = () => {
               <h1 className="subtitle">Por que a</h1>
               <h1 className="title">Mad Módulos?</h1>
             </div>
-            {/* Left: Gallery Grid */}
             <div>
-              <img className="gallery" src="/src/assets/grid.png" alt="Closet design 4" />
+              <img className="gallery" src="grid.png" alt="Closet design 4" />
             </div>
         </div>
 
-        {/* Right: Content */}
         <div className="mad-modulos-text">
 
           <div className="mad-modulos-features">
@@ -63,13 +67,13 @@ const WhySection: React.FC = () => {
             ))}
 
             <a
-              href="https://wa.me/5511981217300"
+              href={`https://wa.me/${whatsappNumber}?text=${message}`}
               className="whatsapp-btn"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Faça um orçamento pelo WhatsApp"
             >
-              <img src="/src/assets/whats-icon.png" alt="WhatsApp" />
+              <img src="whats-icon.png" alt="WhatsApp" />
               Faça um orçamento
             </a>
           </div>

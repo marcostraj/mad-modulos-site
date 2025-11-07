@@ -1,4 +1,3 @@
-import React from "react";
 import { useCart } from "./cardContext";
 import { X, Trash2 } from "lucide-react";
 import { ShoppingCart } from "lucide-react";
@@ -29,7 +28,7 @@ export default function CarrinhoLateral() {
         <div className="cart-body">
           {cart.length === 0 ? (
             <div className="cart-empty">
-              <img src="/src/assets/cart-icon.svg" alt="" />
+              <img src="cart-icon.svg" alt="" />
               <p>Carrinho vazio</p>
               <small>Adicione módulos ao carrinho para finalizar a compra.</small>
             </div>
@@ -45,12 +44,27 @@ export default function CarrinhoLateral() {
                     <span className="span-preco">R$ {item.preco}</span>
                   </div>
                   <div className="cart-item-actions">
-                    <input
-                      type="number"
-                      min={1}
-                      value={item.quantidade || 1}
-                      onChange={(e) => updateQuantity(item.id, Number(e.target.value))}
-                    />
+                    <div className="number-input">
+                      <button
+                        className="arrow up"
+                        onClick={() => updateQuantity(item.id, (item.quantidade || 1) + 1)}
+                      ><img src="/src/assets/arrow2-cart.png" alt="" /></button>
+
+                      <input
+                        type="number"
+                        min={1}
+                        value={item.quantidade || 1}
+                        onChange={(e) => updateQuantity(item.id, Number(e.target.value))}
+                      />
+
+                      <button
+                        className="arrow down"
+                        onClick={() =>
+                          updateQuantity(item.id, Math.max(1, (item.quantidade || 1) - 1))
+                        }
+                      ><img src="/src/assets/arrow-cart.png" alt="" /></button>
+                    </div>
+
                     <button onClick={() => removeFromCart(item.id)} className="remove-btn">
                       <Trash2 size={16} />
                     </button>

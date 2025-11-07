@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
             <div className="navbar-container">
                 <div className="navbar-logo">
                     <Link to="home" smooth={true} duration={800}>
-                        <img src="/src/assets/mad-logo.svg" alt="logotipo" />
+                        <img src="mad-logo.svg" alt="logotipo" />
                     </Link>
                 </div>
 

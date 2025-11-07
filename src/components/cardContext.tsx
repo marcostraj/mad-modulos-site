@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import type { ReactNode } from "react";
 
 
@@ -38,7 +38,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
       if (exists) {
         return prev.map(p => p.id === item.id ? { ...p, quantidade: (p.quantidade || 1) + 1 } : p);
       }
-      return [...prev, { ...item, quantidade: 1 }];
+      return [...prev, { ...item, quantidade: item.quantidade || 1 }];
     });
     setIsCartOpen(true);
   };

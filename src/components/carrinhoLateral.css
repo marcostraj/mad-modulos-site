@@ -68,6 +68,11 @@
     color: #AF0303;
 }
 
+.cart-clear:hover {
+  background-color: #f1f1f1;
+  border-color: #ccc;
+}
+
 .cart-body {
   font-family: "Clash Display", sans-serif;
   padding: 16px;
@@ -203,4 +208,45 @@
 .remove-btn{
     background: #fff;
     color: #AF0303;
+}
+
+.number-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40px;
+  position: relative;
+}
+
+.number-input input {
+  width: 20px;
+  height: 18px;
+  text-align: center;
+  border: 1px solid #D4DBF7;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #EEF1FC;
+}
+
+.number-input input::-webkit-inner-spin-button,
+.number-input input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.arrow {
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+
+.arrow.up img {
+  width: 10px;
+  height: 10px;
+  background-color: #FFFFFF;
+}
+
+.arrow.down img {
+  width: 10px;
+  height: 10px;
+  background-color: #FFFFFF;
 }

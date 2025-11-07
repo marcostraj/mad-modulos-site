@@ -27,9 +27,9 @@
   top: 20px;
   right: 20px;
 
-  background: #262626;
+  background: #FEFFFE;
   color: #339900;
-  border: none;
+  border: 1px solid #D4DBF7;
   border-radius: 6px;
   padding: 10px 16px;
 
@@ -41,7 +41,7 @@
 }
 
 .sound-button:hover {
-  background: #EEF1FC;
+  background: #f1f1f1;
 }
 
 

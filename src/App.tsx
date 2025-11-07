@@ -29,7 +29,9 @@ function App() {
         <CombinationsSection />
       </section>
       <CombinacoesSection />
-      <GallerySection />
+      <section id='galeriaId'>
+        <GallerySection />
+      </section>
       <section id='projeto3dId'>
         <Projeto3DSection />
       </section>

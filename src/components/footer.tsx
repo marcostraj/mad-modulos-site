@@ -3,17 +3,23 @@ import "./footer.css";
 import { Link } from 'react-scroll';
 
 const links: { name: string; href: string }[] = [
-        { name: "Conheça a seleção", href: "carroselId" },
-        { name: "Combinações", href: "carroselId" },
-        { name: "Galeria de imagens", href: "combinationsId" },
-    ];
+        { name: "Conheça a seleção", href: "carrosselId" },
+        { name: "Combinações", href: "combinationsId" },
+        { name: "Galeria de imagens", href: "galeriaId" },
+];
+
+const whatsappNumber = "5511981217300";
+
+  const message = encodeURIComponent(
+    `Olá! Gostaria de fazer um orçamento!`
+  );
 
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-logo">
-          <img src="/src/assets/mad-logo.svg" alt="Logo Módulos" />
+          <img src="mad-logo.svg" alt="Logo Módulos" />
         </div>
         <div className="footer-columns">
           <div className="footer-column">
@@ -41,9 +47,9 @@ const Footer: React.FC = () => {
               <span className="icon blue"></span>Fale conosco
             </h3>
             <ul className="footer-title-ul">
-              <li><a href="#">Whatsapp comercial</a></li>
-              <li><a href="#">Encomendas</a></li>
-              <li><a href="#">Atendimento ao cliente</a></li>
+              <li><a href={`https://wa.me/${whatsappNumber}?text=${message}`} target="_blank">Whatsapp comercial</a></li>
+              <li><a href={`https://wa.me/${whatsappNumber}?text=${message}`} target="_blank">Encomendas</a></li>
+              <li><a href={`https://wa.me/${whatsappNumber}?text=${message}`} target="_blank">Atendimento ao cliente</a></li>
             </ul>
           </div>
 
@@ -62,7 +68,7 @@ const Footer: React.FC = () => {
         <p>
           Desenvolvido por{" "}
           <a href="https://vallen.com.br" target="_blank" rel="noopener noreferrer" className="vallen-link">
-            <img src="/src/assets/vallen-logo.png" alt="" />
+            <img src="vallen-logo.png" alt="" />
           </a>
         </p>
       </div>

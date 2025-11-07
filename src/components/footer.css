@@ -72,6 +72,7 @@
   color: #222;
   text-decoration: none;
   transition: color 0.2s ease;
+  cursor: pointer;
 }
 
 .footer-column ul li a:hover {

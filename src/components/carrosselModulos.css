@@ -164,7 +164,7 @@
 
 .card__hover-popup {
   position: absolute;
-  top: 250px;
+  top: 310px;
   left: 50%;
   transform: translateX(-50%) translateY(-100%);
   background: #FFF5EE;
@@ -217,6 +217,13 @@
 
 .hover-popup__dimensao:last-child {
   border-bottom: none;
+}
+
+.hover-popup__acoes{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
 }
 
 .hover-popup__dimensao span:first-child {
@@ -301,6 +308,10 @@
   border-radius: 100px;
 }
 
+.hover-popup__btn-carrinho{
+  max-height: 40px;
+}
+
 .bolinhas {
   display: flex;
   gap: 6px;
@@ -322,6 +333,58 @@
 .bolinha.ativa {
   background-color: #372121;
 }
+
+.number-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20px;
+  position: relative;
+}
+
+.number-input input {
+  width: 16px;
+  height: 12px;
+  text-align: center;
+  border: 1px solid #D4DBF7;
+  border-radius: 6px;
+  font-size: 12px;
+  background-color: #EEF1FC;
+}
+
+.number-input input::-webkit-inner-spin-button,
+.number-input input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.arrow-pop {
+  cursor: pointer;
+  background-color: #FFF5EE;
+}
+
+.arrow-up-pop img {
+  width: 5px;
+  height: 5px;
+  background-color: #FFF5EE;
+}
+
+.arrow-down-pop img {
+  width: 5px;
+  height: 5px;
+  background-color: #FFF5EE;
+}
+
+@media (max-width: 500px) {
+  .hover-popup__actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .hover-popup__btn-carrinho {
+    width: 100%;
+  }
+}
+
 
 @media (max-width: 1200px) {
   .carrossel__pagina {
