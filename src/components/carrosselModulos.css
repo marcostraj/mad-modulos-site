@@ -219,6 +219,44 @@
   border-bottom: none;
 }
 
+.hover-popup__extras{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-family: "Clash Display", sans-serif;
+  font-size: 14px;
+}
+
+.checkbox{
+  background-color: #ACA0A0;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-container input[type="checkbox"] {
+  display: none;
+}
+
+.checkmark {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 2px solid #ACA0A0;
+  display: inline-block;
+  position: relative;
+}
+
+.checkbox-container input:checked{
+  background-color: #ACA0A0;
+}
+
+
 .hover-popup__acoes{
   display: flex;
   flex-direction: row;

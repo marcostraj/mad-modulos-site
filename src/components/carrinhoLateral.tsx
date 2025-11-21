@@ -48,7 +48,7 @@ export default function CarrinhoLateral() {
                       <button
                         className="arrow up"
                         onClick={() => updateQuantity(item.id, (item.quantidade || 1) + 1)}
-                      ><img src="/src/assets/arrow2-cart.png" alt="" /></button>
+                      ><img src="arrow2-cart.png" alt="" /></button>
 
                       <input
                         type="number"
@@ -62,7 +62,7 @@ export default function CarrinhoLateral() {
                         onClick={() =>
                           updateQuantity(item.id, Math.max(1, (item.quantidade || 1) - 1))
                         }
-                      ><img src="/src/assets/arrow-cart.png" alt="" /></button>
+                      ><img src="arrow-cart.png" alt="" /></button>
                     </div>
 
                     <button onClick={() => removeFromCart(item.id)} className="remove-btn">

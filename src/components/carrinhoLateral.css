@@ -4,7 +4,7 @@
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 1200;
+  z-index: 800000;
 }
 
 .cart-empty{
@@ -181,7 +181,7 @@
     transition: background 0.2s;
     color: #393939;
     border: none;
-    max-width: 60px;
+    max-width: 80px;
     font-weight: 500;
 }
 

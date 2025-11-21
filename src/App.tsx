@@ -11,6 +11,7 @@ import Projeto3DSection from './components/projeto3DSection'
 import Footer from './components/footer'
 import CarrosselModulos from './components/carrosselModulosSection'
 import CarrinhoLateral from './components/carrinhoLateral'
+import FloatingCartButton from './components/floatingCartButton'  
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
     <>
       <Navbar />
       <CarrinhoLateral />
+      <FloatingCartButton />
       <Hero />
       <VideoSection />
       <WhySection />

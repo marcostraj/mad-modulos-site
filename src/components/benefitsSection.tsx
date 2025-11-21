@@ -16,7 +16,7 @@ const whatsappNumber = "5511981217300";
 const benefits: Benefit[] = [
   {
     title: "PERSONALIZAÇÃO TOTAL",
-    text: "Você monta o seu closet de jeito que quiser, escolhendo entre gavetas, maleiros, espécies e mais, para um projeto que realmente reflete suas necessidades.",
+    text: "Você monta o seu closet do jeito que quiser, escolhendo entre gavetas, maleiros, espécies e mais, para um projeto que realmente reflete suas necessidades.",
     icon: "icon1.png",
   },
   {

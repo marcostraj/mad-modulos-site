@@ -4,12 +4,18 @@ import "./gallerySection.css";
 const GallerySection: React.FC = () => {
   const [imagemAtual, setImagemAtual] = useState(0);
   const imagens = [
-    "frame-1.png",
-    "frame-2.png", 
-    "frame-3.png",
-    "frame-4.png",
-    "frame-5.png",
-    "frame-6.png"
+    "frame1.jpeg",
+    "frame2.jpeg", 
+    "frame3.jpeg",
+    "frame4.jpeg",
+    "frame5.jpeg",
+    "frame6.jpeg",
+    "frame7.jpeg",
+    "frame8.jpeg", 
+    "frame9.jpeg",
+    "frame10.jpeg",
+    "frame11.jpeg",
+    "frame12.jpeg",
   ];
 
   const proximaImagem = () => {
